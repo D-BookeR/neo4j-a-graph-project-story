@@ -1,0 +1,1 @@
+CREATE CONSTRAINT ON (proc:Procedure) ASSERT proc.name IS UNIQUE

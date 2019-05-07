@@ -1,0 +1,10 @@
+MERGE (proc:Procedure{name:"OrderProc"})
+MERGE (reception:Task{name:"Reception"})
+MERGE (prep:Task{name:"Preparation"})
+MERGE (shipping:Task{name:"Shipping"})
+MERGE (cancel:Task{name:"Cancellation"})
+MERGE (proc)-[:START]->(reception)
+MERGE (reception)-[:CONFIRM_ORDER]->(prep)
+MERGE (reception)-[:CANCEL]->(cancel)
+MERGE (prep)-[:SEND_ORDER]->(shipping)
+RETURN proc

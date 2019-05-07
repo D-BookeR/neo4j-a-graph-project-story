@@ -1,0 +1,1 @@
+next IN CASE n WHEN 0 THEN [tasks[n+1]] END
