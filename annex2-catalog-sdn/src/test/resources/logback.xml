@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n
+            </Pattern>
+        </layout>
+    </appender>
+
+    <logger name="org.neo4j.ogm.drivers.embedded.transaction" level="DEBUG" />
+    <logger name="org.neo4j.kernel.impl.coreapi" level="DEBUG" />
+    <logger name="org.neo4j.ogm" level="DEBUG" />
+
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>
